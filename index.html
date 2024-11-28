@@ -8,25 +8,29 @@
 </head>
 <body>
     <main class="flex-container">
+
+        <!-- Home team -->
         <section class="flex-container__wrapper">
             <h3 class="flex-container__title">HOME</h3>
-            <p class="flex-container__score">0</p>
+            <p id="score-home-html" class="flex-container__score">0</p>
             <section class="flex-container__inner-flex-container">
-                <button class="flex-container__button">+ 1</button>
-                <button class="flex-container__button">+ 2</button>
-                <button class="flex-container__button">+ 3</button>
+                <button id="btn-1-home-html" class="flex-container__button">+ 1</button>
+                <button id="btn-2-home-html" class="flex-container__button">+ 2</button>
+                <button id="btn-3-home-html" class="flex-container__button">+ 3</button>
             </section>
         </section>
+
+        <!-- Guest team -->
         <section class="flex-container__wrapper">
             <h3 class="flex-container__title">GUEST</h3>
-            <p class="flex-container__score">0</p>
+            <p id="score-guest-html" class="flex-container__score">0</p>
             <section class="flex-container__inner-flex-container">
-                <button class="flex-container__button">+ 1</button>
-                <button class="flex-container__button">+ 2</button>
-                <button class="flex-container__button">+ 3</button>
+                <button id="btn-1-away-html" class="flex-container__button">+ 1</button>
+                <button id="btn-2-away-html" class="flex-container__button">+ 2</button>
+                <button id="btn-2-away-html" class="flex-container__button">+ 3</button>
             </section>
         </section>
-        <button class="flex-container__button flex-container__button--width-80px">New game</button>
+        <button id="btn-new-game-html" class="flex-container__button flex-container__button--width-80px">New game</button>
     </main>
 </body>
 <script src="./script.js"></script>
