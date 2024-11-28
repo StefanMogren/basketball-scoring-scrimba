@@ -12,7 +12,9 @@
     margin-inline: auto;
     padding: 5rem;
     display: flex;
-    gap: 5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 5rem;
     background-color: #1B244A;
     color: white;
 }
@@ -25,7 +27,7 @@
 
 .flex-container__score {
     width: 155px;
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 1rem 0;
     padding: 1rem;
     font-family: 'Cursed Timer ULiL';
@@ -47,6 +49,10 @@
     border: 1px solid white;
     border-radius: 7px;
     background-color: #1B244A;
+}
+
+.flex-container__button--width-80px {
+    width: 80px;
 }
 
 .flex-container__button:hover {
