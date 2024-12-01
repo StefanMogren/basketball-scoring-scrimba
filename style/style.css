@@ -28,8 +28,9 @@
 .flex-container__score {
     width: 155px;
     font-size: 5rem;
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
     padding: 1rem;
+    border-radius: 10px;
     font-family: 'Cursed Timer ULiL';
     color: #F94F6D;
     text-align: center;
