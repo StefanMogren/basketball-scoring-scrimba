@@ -31,6 +31,11 @@ function addHomeScore() {
     else {
         scoreHome.innerText = 'che at!'
     }
+
+    if(parseInt(scoreHome.innerText) > parseInt(scoreGuest.innerText))  {
+        scoreHome.style.border = '5px yellow solid';
+        scoreGuest.style.border = 'none';
+    }
 }
 
 function addGuestScore() {
@@ -42,9 +47,15 @@ function addGuestScore() {
     else {
         scoreGuest.innerText = 'che at!'
     }
+        if(parseInt(scoreGuest.innerText) > parseInt(scoreHome.innerText))  {
+        scoreGuest.style.border = '5px yellow solid';
+        scoreHome.style.border = 'none';
+    }
 }
 
 function restartScore() {
     scoreHome.innerText = "0";
     scoreGuest.innerText = "0";
+    scoreHome.style.border = 'none';
+    scoreGuest.style.border = 'none';
 }
