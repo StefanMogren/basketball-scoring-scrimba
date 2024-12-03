@@ -7,17 +7,17 @@ buttonHome.forEach((btn)=>{
 });
 
 
-// Every button that adds score to the Guest team will trigger the function addGuestScore.
-// addGuestScore will check the content of the button itself and only use the value (namely 1, 2, and 3) in order to add the score.
-const buttonGuest = document.querySelectorAll('.guest-button');
-buttonGuest.forEach((btn)=>{
-    btn.addEventListener('click', addGuestScore);
+// Every button that adds score to the Away team will trigger the function addAwayScore.
+// addAwayScore will check the content of the button itself and only use the value (namely 1, 2, and 3) in order to add the score.
+const buttonAway = document.querySelectorAll('.away-button');
+buttonAway.forEach((btn)=>{
+    btn.addEventListener('click', addAwayScore);
 });
 
 
-// The score for both the Home and Guest team.
+// The score for both the Home and Away team.
 const scoreHome = document.getElementById('score-home-html')
-const scoreGuest = document.getElementById('score-guest-html')
+const scoreAway = document.getElementById('score-away-html')
 
 
 // Button to start a new game.
@@ -43,30 +43,30 @@ function addHomeScore() {
         scoreHome.innerText = 'che at!'
     }
 
-    if(parseInt(scoreHome.innerText) > parseInt(scoreGuest.innerText))  {
+    if(parseInt(scoreHome.innerText) > parseInt(scoreAway.innerText))  {
         scoreHome.style.border = '5px yellow solid';
-        scoreGuest.style.border = 'none';
+        scoreAway.style.border = 'none';
     }
 }
 
 
-// After you press the Guest score buttons, the function will first check to see if the content of said buttons are either +1, +2, or +3.
+// After you press the Away score buttons, the function will first check to see if the content of said buttons are either +1, +2, or +3.
 // An anti-cheat function prevents people from modifying the buttons on the web browser itself.
 // The function then removes the + and turns the string into a number.
-// The function also turns the content of scoreGuest into a number.
-// The function finally adds the values together and returns them into scoreGuest.
+// The function also turns the content of scoreAway into a number.
+// The function finally adds the values together and returns them into scoreAway.
 // Finally, if this team has a score higher than the opponent, the border around the score turns yellow.
-function addGuestScore() {
+function addAwayScore() {
     if(this.innerText === '+1' || this.innerText === '+2' || this.innerText === '+3' ) {
         let btnToNum = parseInt(this.innerText.slice(1));
-        let scoreToNum = parseInt(scoreGuest.innerText);
-        scoreGuest.innerText = scoreToNum + btnToNum;
+        let scoreToNum = parseInt(scoreAway.innerText);
+        scoreAway.innerText = scoreToNum + btnToNum;
     }
     else {
-        scoreGuest.innerText = 'che at!'
+        scoreAway.innerText = 'che at!'
     }
-        if(parseInt(scoreGuest.innerText) > parseInt(scoreHome.innerText))  {
-        scoreGuest.style.border = '5px yellow solid';
+        if(parseInt(scoreAway.innerText) > parseInt(scoreHome.innerText))  {
+        scoreAway.style.border = '5px yellow solid';
         scoreHome.style.border = 'none';
     }
 }
@@ -76,7 +76,7 @@ function addGuestScore() {
 // Also removes the yellow border if it's present.
 function restartScore() {
     scoreHome.innerText = "0";
-    scoreGuest.innerText = "0";
+    scoreAway.innerText = "0";
     scoreHome.style.border = 'none';
-    scoreGuest.style.border = 'none';
+    scoreAway.style.border = 'none';
 }
